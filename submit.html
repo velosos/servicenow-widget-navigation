@@ -1,0 +1,37 @@
+<div class="success-container">
+  <div class="success-message">
+    <div class="icon-wrapper" ng-if="!c.isLoading">
+    </div>    
+    <div class="message-text" ng-if="c.isLoading">
+      <p>Criando solicitação...</p>
+    </div>
+    <div class="message-text" ng-if="!c.isLoading">
+      <p>Sua solicitação de acesso foi criada com sucesso.:)</p>
+      <div ng-repeat="ritm in c.ritms">
+        <a 
+          ng-href="esc?id=ticket&is_new_order=true&table=sc_req_item&sys_id={{ritm.sysID}}" 
+          target="_blank" 
+          class="ritm-link">
+          {{ritm.number}} 
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="rating-container">
+  <p>Avalie sua experiência de criação de caso</p>
+  <div class="stars">
+    <i ng-repeat="star in [1,2,3,4,5]"
+       class="fa"
+       ng-class="c.rating >= star ? 'fa-star' : 'fa-star-o'"
+       ng-click="!c.thankYou && c.setRating(star)">
+    </i>
+  </div>
+  <div ng-if="c.thankYou" class="thank-you-message">
+    Obrigado pela avaliação!
+  </div>
+</div>
+ <sp-widget widget="c.dinamycFooterWidget"></sp-widget>
+
+</div>
