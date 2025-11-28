@@ -1,0 +1,46 @@
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h1 {
+    font-size: 27px;
+  	font-weight:700;
+    color: #333;
+    margin: 0;
+  	margin-right: 45%;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    color: #555;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    background-color: #f0f0f0;
+    height: 12px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.progress-bar-fill {
+    background-color: #58D073; 
+    height: 100%;
+    width: 0;
+    transition: width 0.4s ease-in-out;
+}
